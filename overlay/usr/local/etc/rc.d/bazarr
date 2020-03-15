@@ -9,6 +9,8 @@
 # bazarr_enable (bool):	Set to NO by default.
 #				Set it to YES to enable bazarr.
 
+. /etc/rc.subr
+
 name="bazarr"
 rcvar="${name}_enable"
 start_cmd="${name}_start"
