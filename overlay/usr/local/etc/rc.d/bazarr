@@ -36,3 +36,5 @@ bazarr_stop()
       # TODO
     fi
 }
+
+load_rc_config $name
