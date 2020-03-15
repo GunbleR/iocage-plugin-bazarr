@@ -19,9 +19,11 @@ stop_cmd="${name}_stop"
 load_rc_config $name
 : ${bazarr_enable:="NO"}
 
+command_interpreter="/usr/local/bin/python3.8"
+
 bazarr_data_dir:="/usr/local/bazarr"
 pidfile="/usr/local/bazarr/bazarr.pid"
-python_bin="/usr/local/bin/python3.8"
+
 
 bazarr_start()
 {
