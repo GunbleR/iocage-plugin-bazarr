@@ -1,3 +1,6 @@
+Iocage [bazarr](https://github.com/morpheus65535/bazarr) plugin for freenas. 
+
+
 # Testing manually
 
 In freenas shell run:
