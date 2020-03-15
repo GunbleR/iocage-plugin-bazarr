@@ -28,7 +28,7 @@ bazarr_log="/var/log/bazarr.log"
 
 pidfile="${bazarr_dir}/bazarr.pid"
 command="/usr/sbin/daemon"
-command_args="-o ${bazarr_log} -p ${pidfile} ${python_bin} ${bazarr_dir}/bazarr.py"
+command_args="-o ${bazarr_log} -P ${pidfile} ${python_bin} ${bazarr_dir}/bazarr.py"
 
 bazarr_precmd()
 {
