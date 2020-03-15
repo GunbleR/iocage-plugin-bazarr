@@ -10,6 +10,8 @@
 #				Set it to YES to enable bazarr.
 # bazarr_dir: Directory where bazarr is installed
 #             Default: /usr/local/bazarr
+# bazarr_user: User to start the deamon with
+#              Default: bazarr
 
 . /etc/rc.subr
 
@@ -17,22 +19,27 @@ name="bazarr"
 rcvar="${name}_enable"
 
 start_precmd=bazarr_precmd
-stop_postcmd="Stopping bazarr.."
 
 load_rc_config $name
 : ${bazarr_enable:="NO"}
 : ${bazarr_dir:="/usr/local/bazarr"}
+: ${bazarr_user:="bazarr"}
 
 python_bin="/usr/local/bin/python3.8"
 bazarr_log="/var/log/bazarr.log"
 
 pidfile="${bazarr_dir}/bazarr.pid"
 command="/usr/sbin/daemon"
-command_args="-o ${bazarr_log} -P ${pidfile} ${python_bin} ${bazarr_dir}/bazarr.py"
+command_args="-o ${bazarr_log} -P ${pidfile} -u ${bazarr_user} ${python_bin} ${bazarr_dir}/bazarr.py"
 
 bazarr_precmd()
 {
     export GIT_PYTHON_GIT_EXECUTABLE=/usr/local/bin/git
+}
+
+bazarr_postcmd()
+{
+	killall -u ${bazarr_user} -INT
 }
 
 run_rc_command "$1"
