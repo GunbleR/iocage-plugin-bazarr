@@ -1,0 +1,36 @@
+#!/usr/local/bin/sh
+
+# PROVIDE: bazarr
+# REQUIRE: LOGIN
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# bazarr_enable (bool):	Set to NO by default.
+#				Set it to YES to enable bazarr.
+
+name="bazarr"
+rcvar="${name}_enable"
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+: ${bazarr_enable:="NO"}
+
+bazarr_data_dir:="/usr/local/bazarr"
+pidfile="/usr/local/bazarr/bazarr.pid"
+python_bin="/usr/local/bin/python3.8"
+
+bazarr_start()
+{
+    if checkyesno ${rcvar}; then
+      echo "Starting bazarr"
+      ${python_bin} ${bazarr_data_dir}/bazarr.py
+    fi
+}
+bazarr_stop()
+{
+    if checkyesno ${rcvar}; then
+      echo "Stopping bazarr"
+      # TODO
+    fi
+}
