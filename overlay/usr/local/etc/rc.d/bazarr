@@ -23,8 +23,8 @@ load_rc_config $name
 : ${bazarr_enable:="NO"}
 : ${bazarr_dir:="/usr/local/bazarr"}
 
-command_interpreter="/usr/local/bin/python3.8"
-command="${bazarr_dir}/bazarr.py"
+command="/usr/local/bin/python3.8"
+command_arguments="${bazarr_dir}/bazarr.py"
 pidfile="${bazarr_dir}/bazarr.pid"
 
 bazarr_precmd()
