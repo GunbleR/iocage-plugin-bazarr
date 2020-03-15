@@ -16,6 +16,7 @@
 name="bazarr"
 rcvar="${name}_enable"
 
+start_precmd=bazarr_precmd
 stop_postcmd="Stopping bazarr.."
 
 load_rc_config $name
@@ -25,5 +26,10 @@ load_rc_config $name
 command_interpreter="/usr/local/bin/python3.8"
 command="${bazarr_dir}/bazarr.py"
 pidfile="${bazarr_dir}/bazarr.pid"
+
+bazarr_precmd()
+{
+    export GIT_PYTHON_GIT_EXECUTABLE=/usr/local/bin/git
+}
 
 run_rc_command "$1"
