@@ -8,6 +8,7 @@ pip install -r /usr/local/bazarr/requirements.txt --user
 
 # Create bazarr user
 pw useradd -n bazarr -c "Bazarr" -s /sbin/nologin -w no
+chown -R bazarr /usr/local/bazarr
 
 # Enable bazarr service
 sysrc -f /etc/rc.conf bazarr_enable="YES"
