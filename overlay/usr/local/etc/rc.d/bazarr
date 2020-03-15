@@ -24,7 +24,7 @@ load_rc_config $name
 
 command_interpreter="/usr/local/bin/python3.8"
 command="${bazarr_dir}/bazarr.py"
-pidfile="/usr/local/bazarr/bazarr.pid"
+pidfile="${bazarr_dir}/bazarr.pid"
 
 
 bazarr_start()
