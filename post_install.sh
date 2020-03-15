@@ -11,7 +11,7 @@ tar xfz "v${version}.tar.gz" -C /usr/local/
 mv "/usr/local/bazarr-${version}" /usr/local/bazarr
 
 echo "Installing bazarr requirements"
-pip install -r /usr/local/bazarr/requirements.txt --user
+pip install -r /usr/local/bazarr/requirements.txt
 
 echo "Creating new user with name: {user_name}"
 pw useradd -n ${user_name} -c "Bazarr" -s /sbin/nologin -w no
