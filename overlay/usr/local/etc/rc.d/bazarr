@@ -16,6 +16,7 @@ rcvar="${name}_enable"
 start_cmd="${name}_start"
 stop_cmd="${name}_stop"
 
+load_rc_config $name
 : ${bazarr_enable:="NO"}
 
 bazarr_data_dir:="/usr/local/bazarr"
@@ -37,5 +38,4 @@ bazarr_stop()
     fi
 }
 
-load_rc_config $name
 run_rc_command "$1"
