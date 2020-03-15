@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p /usr/local/etc/rc.d
+
 fetch https://github.com/morpheus65535/bazarr/archive/v0.8.4.2.tar.gz
 tar xfz v0.8.4.2.tar.gz -C /usr/local/
 mv /usr/local/bazarr-0.8.4.2 /usr/local/bazarr
@@ -11,6 +13,7 @@ pw useradd -n bazarr -c "Bazarr" -s /sbin/nologin -w no
 chown -R bazarr /usr/local/bazarr
 
 # Enable bazarr service
+chmod +x /usr/local/etc/rc.d/bazarr
 sysrc -f /etc/rc.conf bazarr_enable="YES"
 
 # Start service
