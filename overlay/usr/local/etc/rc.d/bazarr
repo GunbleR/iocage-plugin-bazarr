@@ -8,6 +8,8 @@
 #
 # bazarr_enable (bool):	Set to NO by default.
 #				Set it to YES to enable bazarr.
+# bazarr_dir: Directory where bazarr is installed
+#             Default: /usr/local/bazarr
 
 . /etc/rc.subr
 
@@ -18,10 +20,10 @@ stop_cmd="${name}_stop"
 
 load_rc_config $name
 : ${bazarr_enable:="NO"}
+: ${bazarr_dir:="/usr/local/bazarr"}
 
 command_interpreter="/usr/local/bin/python3.8"
 
-bazarr_data_dir:="/usr/local/bazarr"
 pidfile="/usr/local/bazarr/bazarr.pid"
 
 
