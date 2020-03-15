@@ -15,8 +15,6 @@
 
 name="bazarr"
 rcvar="${name}_enable"
-start_cmd="${name}_start"
-stop_cmd="${name}_stop"
 
 load_rc_config $name
 : ${bazarr_enable:="NO"}
@@ -25,21 +23,5 @@ load_rc_config $name
 command_interpreter="/usr/local/bin/python3.8"
 command="${bazarr_dir}/bazarr.py"
 pidfile="${bazarr_dir}/bazarr.pid"
-
-
-bazarr_start()
-{
-    if checkyesno ${rcvar}; then
-      echo "Starting bazarr"
-      ${python_bin} ${bazarr_data_dir}/bazarr.py
-    fi
-}
-bazarr_stop()
-{
-    if checkyesno ${rcvar}; then
-      echo "Stopping bazarr"
-      # TODO
-    fi
-}
 
 run_rc_command "$1"
