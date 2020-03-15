@@ -24,10 +24,11 @@ load_rc_config $name
 : ${bazarr_dir:="/usr/local/bazarr"}
 
 python_bin="/usr/local/bin/python3.8"
+bazarr_log="/var/log/bazarr.log"
 
 pidfile="${bazarr_dir}/bazarr.pid"
 command="/usr/sbin/daemon"
-command_args="-p ${pidfile} ${python_bin} ${bazarr_dir}/bazarr.py"
+command_args="-o ${bazarr_log} -p ${pidfile} ${python_bin} ${bazarr_dir}/bazarr.py"
 
 bazarr_precmd()
 {
