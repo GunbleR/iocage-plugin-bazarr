@@ -13,7 +13,6 @@ git -C /usr/local/bazarr remote add origin ${git_url}
 
 echo "Reset bazarr to latest master"
 git -C /usr/local/bazarr fetch
-git -C /usr/local/bazarr checkout -b master origin/master
 git -C /usr/local/bazarr reset --hard origin/master
 
 echo "Git cleanup"
