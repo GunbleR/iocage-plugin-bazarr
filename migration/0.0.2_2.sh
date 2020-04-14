@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 git_url=https://github.com/morpheus65535/bazarr.git
 
 echo "Re-init git"
