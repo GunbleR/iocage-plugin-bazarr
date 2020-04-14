@@ -19,3 +19,6 @@ git -C /usr/local/bazarr clean -f -d
 
 echo "Installing requirements"
 pip install -U -r /usr/local/bazarr/requirements.txt
+
+echo "Cleanup"
+rm -f /v0.8.4.2.tar.gz
