@@ -3,5 +3,5 @@
 echo "Running migration for 0.0.2"
 
 ls -l migration
-git log
+pwd
 ./migration/0.0.2_2.sh
