@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git_url=https://github.com/morpheus65535/bazarr.git
+git_url="https://github.com/morpheus65535/bazarr.git"
 
 echo "Re-init git"
 rm -rf /usr/local/bazarr/.git
