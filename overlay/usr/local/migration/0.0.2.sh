@@ -24,3 +24,6 @@ pip install -U -r /usr/local/bazarr/requirements.txt
 
 echo "Cleanup"
 rm -f /v0.8.4.2.tar.gz
+
+echo "Restart bazarr"
+service bazarr restart
