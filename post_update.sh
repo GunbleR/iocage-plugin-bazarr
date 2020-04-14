@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-git remote add origin https://github.com/morpheus65535/bazarr.git
+git -C /usr/local/bazarr remote add origin https://github.com/morpheus65535/bazarr.git
