@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-
-git -C /usr/local/bazarr remote add origin https://github.com/morpheus65535/bazarr.git
+echo "Running migration for 0.0.2"
+./migration/0.0.2.sh
