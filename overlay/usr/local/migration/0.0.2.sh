@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Running migration for 0.0.2"
+
 git_url="https://github.com/morpheus65535/bazarr.git"
 
 echo "Re-init git"
