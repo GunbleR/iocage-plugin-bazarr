@@ -4,7 +4,7 @@ set -e
 
 git_url=https://github.com/morpheus65535/bazarr.git
 
-echo "Re-init git if needed"
+echo "Re-init git"
 rm -rf /usr/local/bazarr/.git
 git -C /usr/local/bazarr init
 
