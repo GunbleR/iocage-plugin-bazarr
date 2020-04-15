@@ -1,3 +1,3 @@
 #!/bin/sh
 
-service bazarr start
+service bazarr stop
