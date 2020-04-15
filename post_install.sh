@@ -12,7 +12,7 @@ pip install -r /usr/local/bazarr/requirements.txt
 
 echo "Creating new user with name: ${user_name}"
 pw useradd -n ${user_name} -c "Bazarr" -s /sbin/nologin -w no
-chown -R ${user_name}  /usr/local/bazarr
+chown -R ${user_name} /usr/local/bazarr
 
 echo "Start bazarr service"
 chmod +x /usr/local/etc/rc.d/bazarr
