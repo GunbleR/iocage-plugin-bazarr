@@ -1,3 +1,3 @@
 #!/bin/sh
 
-service bazarr stop
+service bazarr stop | true
