@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Running migration for 0.0.2"
+echo "Running migration for 0.1.0"
 
 git_url="https://github.com/morpheus65535/bazarr.git"
 
