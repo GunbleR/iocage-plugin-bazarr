@@ -27,7 +27,7 @@ load_rc_config $name
 : ${bazarr_dir:="/usr/local/bazarr"}
 : ${bazarr_daemon_user:="bazarr"}
 
-python_bin="/usr/local/bin/python3.8"
+python_bin="/usr/local/bin/python3"
 bazarr_log="/var/log/bazarr.log"
 
 pidfile="${bazarr_dir}/bazarr.pid"
