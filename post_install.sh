@@ -4,8 +4,11 @@ mkdir -p /usr/local/etc/rc.d
 
 user_name="bazarr"
 
-echo "Clone bazarr repo"
-git clone https://github.com/morpheus65535/bazarr.git /usr/local/bazarr
+echo "Fetch ZIP"
+fetch https://github.com/morpheus65535/bazarr/releases/latest/download/bazarr.zip
+
+echo "Unzip bazarr archive"
+unzip -d /usr/local/bazarr bazarr.zip
 
 echo "Installing bazarr requirements"
 pip install -r /usr/local/bazarr/requirements.txt
