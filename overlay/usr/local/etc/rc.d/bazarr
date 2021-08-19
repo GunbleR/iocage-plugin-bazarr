@@ -19,7 +19,6 @@
 name="bazarr"
 rcvar="${name}_enable"
 
-start_precmd=bazarr_precmd
 stop_postcmd=bazarr_postcmd
 
 load_rc_config $name
@@ -34,14 +33,9 @@ pidfile="${bazarr_dir}/bazarr.pid"
 command="/usr/sbin/daemon"
 command_args="-o ${bazarr_log} -P ${pidfile} -u ${bazarr_daemon_user} ${python_bin} ${bazarr_dir}/bazarr.py"
 
-bazarr_precmd()
-{
-    export GIT_PYTHON_GIT_EXECUTABLE=/usr/local/bin/git
-}
-
 bazarr_postcmd()
 {
-	killall -u ${bazarr_daemon_user} -9
+  killall -u ${bazarr_daemon_user} -9
 }
 
 run_rc_command "$1"
