@@ -19,7 +19,6 @@
 name="bazarr"
 rcvar="${name}_enable"
 
-start_precmd=bazarr_precmd
 stop_postcmd=bazarr_postcmd
 
 load_rc_config $name
