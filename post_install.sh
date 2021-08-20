@@ -2,9 +2,7 @@
 
 mkdir -p /usr/local/etc/rc.d
 
-# quickfix before index portback
-pkg install -y unzip
-pkg delete -y git-lite
+pkg install -y unzip # quickfix before index portback
 
 user_name="bazarr"
 
