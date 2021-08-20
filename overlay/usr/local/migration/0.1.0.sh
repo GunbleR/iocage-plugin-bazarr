@@ -2,6 +2,12 @@
 
 echo "Running migration for 0.1.0"
 
+if ! which -s git
+then
+  echo "Git not installed, ignoring old git migration"
+  return 0
+fi
+
 git_url="https://github.com/morpheus65535/bazarr.git"
 
 echo "Re-init git"
