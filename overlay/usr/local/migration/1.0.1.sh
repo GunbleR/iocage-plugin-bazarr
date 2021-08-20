@@ -2,7 +2,9 @@
 
 echo "Running migration for 0.3.0"
 
-pkg install unzip # quickfix before index portback
+# quickfix before index portback
+pkg install -y unzip
+pkg delete -y git-lite
 
 echo "Fetch ZIP"
 fetch https://github.com/morpheus65535/bazarr/releases/latest/download/bazarr.zip
