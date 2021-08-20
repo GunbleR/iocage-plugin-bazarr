@@ -2,7 +2,7 @@
 
 mkdir -p /usr/local/etc/rc.d
 
-pkg install unzip # quickfix before index portback
+pkg install -y unzip # quickfix before index portback
 
 user_name="bazarr"
 
