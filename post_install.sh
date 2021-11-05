@@ -16,7 +16,7 @@ echo "Installing bazarr requirements"
 pip install -r /usr/local/bazarr/requirements.txt
 
 echo "Creating new user with name: ${user_name}"
-pw useradd -n ${user_name} -c "Bazarr" -s /sbin/nologin -w no -u 898
+pw useradd -n ${user_name} -c "Bazarr" -s /sbin/nologin -w no -u 367
 chown -R ${user_name} /usr/local/bazarr
 
 echo "Start bazarr service"
